@@ -2,12 +2,12 @@ import type { Metadata, Viewport } from "next";
 import "../globals.css";
 import SiteShell from "@/components/SiteShell";
 import { inter } from "@/lib/fonts";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_NAME, SITE_URL, INDEXABLE } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: SITE_NAME, template: `%s | ${SITE_NAME}` },
-  robots: { index: true, follow: true },
+  robots: { index: INDEXABLE, follow: INDEXABLE },
 };
 
 export const viewport: Viewport = { themeColor: "#0b3d4a" };

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { CARD_PRICES, aed } from "@/lib/fares";
 import { pathFor, type Locale } from "@/lib/site";
+import { CardFront, type CardKind } from "./CardArt";
 
 type Stay = "short" | "long" | "resident";
 type Cls = "standard" | "gold";
@@ -51,6 +52,8 @@ const L = {
     tipResident: "نصيحة: تسجيل البطاقة الفضية عبر الإنترنت يحمي رصيدك أيضاً، وهو خيار أرخص إن لم تكن بحاجة إلى خصم.",
   },
 };
+
+const ART: Record<Pick, CardKind> = { red: "red", silver: "silver", gold: "gold", personal: "blue" };
 
 const GUIDE: Record<Pick, string> = {
   red: "nol-red-ticket",
@@ -116,7 +119,8 @@ export default function CardPicker({ locale }: { locale: Locale }) {
         <Choice q={t.q3} value={conc} onChange={setConc} options={t.conc} />
       </div>
 
-      <div className="mt-8 rounded-2xl bg-brand p-5 text-white" aria-live="polite">
+      <div className="mt-8 grid items-center gap-6 rounded-2xl bg-brand p-5 text-white sm:grid-cols-[1fr_200px]" aria-live="polite">
+        <div>
         <p className="text-xs font-bold uppercase tracking-wider text-accent">{t.result}</p>
         <p className="mt-1 text-2xl font-extrabold">{c.name}</p>
         <p className="mt-2 leading-relaxed text-white/90">{c.why}</p>
@@ -135,6 +139,8 @@ export default function CardPicker({ locale }: { locale: Locale }) {
         >
           {t.readMore} {locale === "ar" ? "←" : "→"}
         </a>
+        </div>
+        <CardFront key={pick} kind={ART[pick]} locale={locale} className="mx-auto w-48 rotate-[-4deg] sm:w-full" />
       </div>
       {stay === "resident" && conc === "none" && cls === "standard" && (
         <p className="mt-4 text-sm text-ink/80">{t.tipResident}</p>

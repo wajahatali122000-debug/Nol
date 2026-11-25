@@ -1,5 +1,8 @@
 // Site-wide settings. SITE_NAME is a placeholder until the domain is bought.
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.example.com").replace(/\/$/, "");
+/** Search engines may index the site only once the real domain is set in NEXT_PUBLIC_SITE_URL.
+ *  Until then (e.g. on the *.vercel.app preview) every page is noindex. */
+export const INDEXABLE = !!process.env.NEXT_PUBLIC_SITE_URL && !/example\.com/.test(process.env.NEXT_PUBLIC_SITE_URL);
 export const SITE_NAME = "Nol Balance Guide";
 export const SITE_NAME_AR = "دليل رصيد نول";
 export const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "";

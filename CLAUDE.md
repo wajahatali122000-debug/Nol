@@ -23,7 +23,8 @@ Next.js 15 (App Router, TS) · Tailwind v4 · content in Markdown (`gray-matter`
 - Goal: key info at first glance. Home = `components/HomeView.tsx` (hero with 3 steps + card illustration showing the tag ID, key-facts panel, task tiles, full guide, guide hub). Copy/links for it: `lib/home.ts` (both languages; Arabic links only to pages that exist in Arabic).
 - Every guide has an "At a glance" strip from frontmatter `keyfacts:` (3–4 label/value pairs). Source of truth: `scripts/keyfacts.json` → `node scripts/apply-keyfacts.mjs`.
 - Icons: `components/Icon.tsx` (inline SVG, no library). Palette in `app/globals.css` `@theme` — teal `brand` + amber `accent`, deliberately not RTA red.
-- The card illustration is a generic card back, not the real nol card design. Keep it that way.
+- Card illustrations: `components/CardArt.tsx` (our own artwork per card colour, no RTA/nol logos — never use RTA's real card images). Which page shows which card: `PAGE_ART` in that file.
+- Indexing: `INDEXABLE` in `lib/site.ts` — every page is noindex until `NEXT_PUBLIC_SITE_URL` is set to the real domain in Vercel.
 
 ## Before shipping any content change
 1. `node scripts/check-content.mjs` — broken links, related slugs, title/description lengths, list of AED amounts to eyeball.

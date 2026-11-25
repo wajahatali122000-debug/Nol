@@ -1,35 +1,24 @@
 import Link from "next/link";
 import ArticleView from "./ArticleView";
+import { CardBack, CardFan } from "./CardArt";
 import Icon, { CATEGORY_ICON } from "./Icon";
 import { CATEGORY_LABEL, CATEGORY_ORDER, listPages, type Page } from "@/lib/content";
 import { HOME } from "@/lib/home";
-import { OFFICIAL, pathFor } from "@/lib/site";
+import { OFFICIAL, pathFor, type Locale } from "@/lib/site";
 
-/** Stylised card back (deliberately not the real nol card design) showing where the tag ID is. */
-function CardVisual({ label, tag }: { label: string; tag: string }) {
+/** Hero art: fan of illustrated cards with a card back in front showing where the tag ID is. */
+function CardVisual({ label, tag, locale }: { label: string; tag: string; locale: Locale }) {
   return (
-    <div className="relative mx-auto w-full max-w-[260px] sm:max-w-sm" aria-hidden>
-      <div className="absolute -inset-6 rounded-[2rem] bg-accent/25 blur-2xl" />
-      <div className="relative aspect-[1.586] rotate-[-4deg] rounded-2xl bg-gradient-to-br from-white to-slate-200 p-5 shadow-2xl ring-1 ring-black/5 transition duration-500 hover:rotate-0">
-        <div className="h-7 w-full rounded bg-slate-800/85" />
-        <div className="mt-4 flex items-center justify-between">
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">{label}</span>
-          <span className="h-6 w-10 rounded bg-slate-300" />
-        </div>
-        <div className="mt-3 space-y-1.5">
-          <div className="h-1.5 w-3/4 rounded bg-slate-300" />
-          <div className="h-1.5 w-1/2 rounded bg-slate-300" />
-        </div>
-        <div className="absolute bottom-5 start-5 end-5 flex items-end justify-between" dir="ltr">
-          <span className="rounded-lg bg-accent px-2.5 py-1.5 font-mono text-base font-bold tracking-widest text-brand ring-4 ring-accent/40">
-            1234 567 890
-          </span>
-        </div>
+    <div className="relative mx-auto w-full max-w-[300px] sm:max-w-md">
+      <div className="absolute -inset-6 rounded-[2rem] bg-accent/20 blur-2xl" aria-hidden />
+      <CardFan kinds={["silver", "gold", "blue"]} locale={locale} />
+      <div className="relative z-20 -mt-[4%] ms-[0%] w-[56%] rotate-[-5deg] sm:-mt-[6%]">
+        <CardBack label={label} className="w-full" />
       </div>
-      <div className="relative mt-5 flex items-center justify-center gap-2 text-sm font-bold text-accent">
+      <p className="relative mt-4 flex items-center justify-center gap-2 text-sm font-bold text-accent">
         <Icon name="arrow" className="h-4 w-4 -rotate-90" />
         {tag}
-      </div>
+      </p>
     </div>
   );
 }
@@ -93,7 +82,7 @@ export default function HomeView({ page }: { page: Page }) {
               {h.safe}
             </p>
           </div>
-          <CardVisual label={h.cardBack} tag={h.tagLabel} />
+          <CardVisual label={h.cardBack} tag={h.tagLabel} locale={locale} />
         </div>
       </section>
 

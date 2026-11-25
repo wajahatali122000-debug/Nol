@@ -2,6 +2,7 @@ import Link from "next/link";
 import AdSlot from "./AdSlot";
 import Breadcrumbs, { type Crumb } from "./Breadcrumbs";
 import Faq from "./Faq";
+import { CardBack, CardFan, CardFront, PAGE_ART } from "./CardArt";
 import Icon, { CATEGORY_ICON } from "./Icon";
 import JsonLd from "./JsonLd";
 import OfficialCta from "./OfficialCta";
@@ -38,6 +39,8 @@ export default function ArticleView({ page, embedded = false }: { page: Page; em
     (p, i, arr) => arr.findIndex((x) => x.slug === p.slug) === i,
   ).slice(0, 6);
 
+  const art = PAGE_ART[page.slug];
+
   const meta = (
     <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
       <span className="inline-flex items-center gap-1.5">
@@ -62,6 +65,8 @@ export default function ArticleView({ page, embedded = false }: { page: Page; em
           />
           <div className="relative mx-auto max-w-6xl px-4 pb-8 pt-5">
             {!isHome && <Breadcrumbs items={crumbs} />}
+            <div className={art ? "grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_340px]" : ""}>
+            <div>
             {!isLegal && (
               <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-600 ring-1 ring-brand/10">
                 <Icon name={CATEGORY_ICON[page.category]} className="h-4 w-4" />
@@ -84,6 +89,19 @@ export default function ArticleView({ page, embedded = false }: { page: Page; em
                 ))}
               </dl>
             )}
+            </div>
+            {art && (
+              <div className="mx-auto w-full max-w-[280px] lg:max-w-none">
+                {art === "back" ? (
+                  <CardBack label={locale === "ar" ? "ظهر البطاقة ورقمها" : "Back of a nol card with the tag ID"} className="w-full rotate-[-3deg]" />
+                ) : art.length === 1 ? (
+                  <CardFront kind={art[0]} locale={locale} className="w-full rotate-[-4deg]" />
+                ) : (
+                  <CardFan kinds={art} locale={locale} />
+                )}
+              </div>
+            )}
+            </div>
           </div>
         </header>
       )}
