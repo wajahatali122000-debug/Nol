@@ -1,0 +1,38 @@
+{
+  "en": {
+    "find-nol-card-number": [["Number you need","10-digit tag ID"],["Where","Back of the card"],["Used for","Online balance check"],["Never share","Your SMS PIN"]],
+    "nol-balance-not-updated": [["Online top-up delay","45 min – 4 h"],["Then tap at","Gate, meter or bus machine"],["Instant top-ups","Ticket machine & office"],["RTA helpline","800 9090"]],
+    "nol-card-recharge": [["Top-up channels","App, web, machines, outlets"],["Online activation","45 min – 4 h + tap"],["Max (anonymous)","AED 1,000"],["Max (registered)","AED 5,000"]],
+    "nol-pay-app": [["Made by","RTA"],["Check balance","Yes"],["Top up","Yes"],["Virtual nol card","Yes"]],
+    "register-nol-card": [["Where","Online or ticket office"],["You receive","SMS with a PIN"],["Then","Tap at a metro gate"],["New max balance","AED 5,000"]],
+    "nol-card-maximum-balance": [["Anonymous card","AED 1,000"],["Registered card","AED 5,000"],["Personal (Blue)","AED 5,000"],["Raise the limit","Register the card"]],
+    "nol-card-types": [["Red ticket","AED 2"],["Silver / Gold","AED 25"],["Personal (Blue)","AED 70"],["nol Travel","AED 100"]],
+    "nol-silver-card": [["Price","AED 25"],["Credit included","AED 19"],["Valid for","5 years"],["Fare per trip","AED 3 – 7.50"]],
+    "nol-gold-card": [["Price","AED 25"],["Credit included","AED 19"],["Fare per trip","AED 6 – 15"],["Extra","Gold Class cabin"]],
+    "nol-personal-blue-card": [["Price","AED 70"],["Credit included","AED 20"],["Max balance","AED 5,000"],["Needed for","Concession fares"]],
+    "nol-red-ticket": [["Price","AED 2"],["Valid for","90 days or 10 trips"],["Fare per trip","AED 4 – 8.50"],["Type","Paper ticket"]],
+    "nol-travel-card": [["Price","AED 100"],["Credit included","AED 19"],["Valid for","5 years"],["Details","noltravel.ae"]],
+    "nol-card-discounts": [["Card needed","Personal (Blue)"],["Card price","AED 70"],["Eligible","Students, 60+, PoD"],["Discount rate","Set by RTA"]],
+    "where-to-buy-nol-card": [["Ticket offices","Metro stations"],["Machines","Metro stations"],["Sales outlets","2,000+"],["Personal card","Apply on nol.rta.ae"]],
+    "nol-card-for-tourists": [["Few trips","Red ticket · AED 2"],["A week or more","Silver · AED 25"],["Includes","AED 19 credit"],["Works on","Metro, tram, bus"]],
+    "nol-card-fares": [["Fare zones","7"],["1 zone (Silver)","AED 3"],["2 zones (Silver)","AED 5"],["3+ zones (Silver)","AED 7.50"]],
+    "nol-metro-bus-transfer": [["Transfer window","30 minutes"],["Charged as","One journey"],["Fare based on","Total zones"],["Applies to","Metro ↔ bus"]],
+    "dubai-metro-gold-class": [["Gold fare per trip","AED 6 – 15"],["Standard fare","AED 3 – 7.50"],["Surcharge on","Metro & tram only"],["Card","Gold nol card"]],
+    "nol-card-parking": [["Cards accepted","Silver, Gold, Blue"],["How","Tap at RTA meter"],["Cash at meters","Phased out 1 Jun 2026"],["Also","Activates online top-ups"]],
+    "nol-card-shopping": [["Max per purchase","AED 200"],["Where","Participating outlets"],["Pays from","Your nol balance"],["Check first","Your balance"]],
+    "lost-nol-card": [["Report via","RTA site, kiosk, nol Pay"],["Balance back?","Registered/Personal only"],["Refund as","Cash or transfer"],["RTA helpline","800 9090"]],
+    "nol-card-refund": [["Reasons","Lost, damaged, faulty, expired"],["Apply via","RTA site, Smart Kiosk"],["Get paid","Cash or card transfer"],["Card is","Blocked on request"]],
+    "nol-card-expiry-renewal": [["Plastic cards","Valid 5 years"],["Red ticket","90 days"],["Expired balance","Refund or transfer"],["Manage at","nol.rta.ae"]],
+    "nol-jaywan-card": [["Pilot","From Nov 2026"],["Partner","Al Etihad Payments"],["Phase 1","Transport, taxis, parking"],["Price","Not announced"]]
+  },
+  "ar": {
+    "find-nol-card-number": [["الرقم المطلوب","رقم البطاقة (10 أرقام)"],["مكانه","ظهر البطاقة"],["يُستخدم لـ","فحص الرصيد إلكترونياً"],["لا تشارك","الرمز السري"]],
+    "nol-card-recharge": [["قنوات الشحن","التطبيق والموقع والآلات"],["تفعيل الشحن الإلكتروني","45 د – 4 س"],["الحد (غير مسجلة)","1,000 درهم"],["الحد (مسجلة)","5,000 درهم"]],
+    "nol-card-types": [["التذكرة الحمراء","2 درهم"],["الفضية / الذهبية","25 درهماً"],["الشخصية (الزرقاء)","70 درهماً"],["نول للسفر","100 درهم"]],
+    "nol-card-discounts": [["البطاقة المطلوبة","الشخصية (الزرقاء)"],["سعرها","70 درهماً"],["المستحقون","الطلاب و60+ وأصحاب الهمم"],["نسبة الخصم","تحددها الهيئة"]],
+    "nol-card-fares": [["مناطق الأجرة","7"],["منطقة واحدة (فضية)","3 دراهم"],["منطقتان (فضية)","5 دراهم"],["3 مناطق فأكثر","7.50 درهم"]],
+    "lost-nol-card": [["الإبلاغ عبر","موقع الهيئة أو الأكشاك أو nol Pay"],["استرداد الرصيد","للمسجلة والشخصية فقط"],["طريقة الاسترداد","نقداً أو تحويل"],["مركز الاتصال","800 9090"]],
+    "nol-card-refund": [["الأسباب","فقدان أو تلف أو عطل أو انتهاء"],["التقديم عبر","موقع الهيئة والأكشاك الذكية"],["الاستلام","نقداً أو تحويل لبطاقة"],["البطاقة","تُوقف عند الطلب"]],
+    "nol-jaywan-card": [["المرحلة التجريبية","من نوفمبر 2026"],["الشريك","الاتحاد للمدفوعات"],["المرحلة الأولى","المواصلات والتاكسي والمواقف"],["السعر","لم يُعلن"]]
+  }
+}
